@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Resume</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body id="information">
+    <form id="resumeForm">
+        <div class="image-upload">
+            <input type="file" id="imageInput" accept="image/*" style="display: none;">
+            <label for="imageInput" class="btn3"><b>Choose Image</b></label>
+            <img id="profileImage" src="./assets/photo.avif" alt="Profile Photo" />
+        </div>
+
+        <h1 id="info">Personal Information</h1>
+        <h2 id="main">Objective</h2>
+        <p id="obj">
+            <i>Obtain a challenging leadership position applying creative problem-solving and management skills with a
+                growing company to achieve optimum utilization of its resources and maximum profits.</i>
+        </p>
+
+        <h2>Person Name</h2>
+        <input type="text" id="name" placeholder="Enter full name..." required>
+        <span class="error" id="name-error"></span>
+
+        <h2 id="main">Email</h2>
+        <input type="email" id="email" placeholder="Enter your email address" required>
+        <span class="error" id="email-error"></span>
+
+        <h2 id="main">Phone Number</h2>
+        <input type="tel" id="number" placeholder="Enter your phone number" required>
+        <span class="error" id="phone-error"></span>
+
+        <h2 id="main">Education</h2>
+        <textarea name="education" id="education" placeholder="Enter Your Qualifications" required></textarea>
+
+        <h2 id="main">Experience</h2>
+        <textarea name="exp" id="exp" placeholder="Enter Your Experience" required></textarea>
+
+        <h2 id="main">Skills</h2>
+        <div class="skill-section">
+            <input name="skill" id="skill1" placeholder="Enter your skill" required>
+            <input name="skill" id="skill2" placeholder="Enter your skill">
+            <input name="skill" id="skill3" placeholder="Enter your skill">
+            <input name="skill" id="skill4" placeholder="Enter your skill">
+        </div>
+
+        <div class="buttons">
+        <button class="btn" type="button" id="addMoreSkills">Add more skills</button>
+        <button class="btn1" type="submit">Build Resume</button>
+        <button type="button" class="btn2" id="downloadBtn">Download Resume</button>
+    </div>
+    </form>
+
+    <!-- Display generated resume -->
+    <div id="display-resume" class="resume-content" style="display:none;"></div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
